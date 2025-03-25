@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+}
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    color: #333;
+}
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+.section {
+    margin-bottom: 20px;
+}
+.contact-info, .skills {
+    list-style: none;
+    padding: 0;
+}
+.contact-info li, .skills li {
+    margin-bottom: 5px;
+}
