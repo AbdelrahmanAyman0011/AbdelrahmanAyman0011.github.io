@@ -19,10 +19,10 @@ body {
     border-radius: 10px;
 }
 
-/* Profile Image - Google Style */
+/* Custom Profile Image Size */
 .profile-image {
-    width: 120px;
-    height: 120px;
+    width: 150px;  /* Adjust this to your preferred size */
+    height: 150px; /* Adjust this to your preferred size */
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 20px;
