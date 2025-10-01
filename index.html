@@ -1,185 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Abdelrahman Mohamed | Resume</title>
+    <meta
+      name="description"
+      content="Resume — Abdelrahman Mohamed, Cyber Security Student"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Font Awesome (v6) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Header -->
+      <header class="header-container" role="banner">
+        <img
+          src="profile.jpg"
+          alt="Photo of Abdelrahman Mohamed"
+          class="profile-image"
+          onerror="this.onerror=null;this.src='avatar-placeholder.png';"
+        />
+        <h1>Abdelrahman Mohamed</h1>
+        <p class="subtitle">Cyber Security Student</p>
+      </header>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abdelrahman Ayman | Resume</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
-
-<body>
-  <div class="container">
-    <!-- Centered Header Section -->
-    <div class="header-container">
-      <img src="profile.jpg" alt="Abdelrahman Ayman" class="profile-image" />
-      <h1>Abdelrahman Ayman</h1>
-      <p class="subtitle">Cyber Security Student</p>
-    </div>
-
-    <!-- Contact Section -->
-    <div class="section">
-      <h2><i class="fas fa-envelope icon"></i> Contact</h2>
-      <ul class="contact-info">
-        <li>
-          <i class="fas fa-envelope"></i>
-          <a href="mailto:abdelrahmanayman0011@gmail.com">abdelrahmanayman0011@gmail.com</a>
-        </li>
-        <li>
-          <i class="fab fa-linkedin"></i>
-          <a href="https://www.linkedin.com/in/bedoayman/" target="_blank">linkedin.com/in/bedoayman</a>
-        </li>
-        <li>
-          <i class="fab fa-github"></i>
-          <a href="https://github.com/AbdelrahmanAyman0011" target="_blank">github.com/AbdelrahmanAyman0011</a>
-        </li>
-        </li>
-        <li>
-          <i class="fas fa-phone"></i>
-          <a href="tel:+201026550844">+20 1026550844</a>
-        </li>
-        <li>
-          <i class="fas fa-file-pdf"></i>
-          <a href="resume.pdf" class="resume-button" target="_blank">Download Resume</a>
-
-      </ul>
-    </div>
-
-    <!-- Education Section -->
-    <div class="section">
-      <h2><i class="fas fa-graduation-cap icon"></i> Education</h2>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <h3>Alexandria National University</h3>
-          <span class="timeline-date">Oct 2022 – Jun 2026</span>
-        </div>
-        <p>Bachelor of Computer Science (Cybersecurity)</p>
-        <p class="highlight">CGPA: 3.60</p>
-      </div>
-    </div>
-
-    <!-- Experience Section -->
-    <div class="section">
-      <h2><i class="fas fa-briefcase icon"></i> Experience</h2>
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <h3>Coding Instructor - iSchool</h3>
-          <span class="timeline-date">Jun 2024 – Sep 2024</span>
-        </div>
-        <ul class="experience-details">
-          <li>Teaching programming and data structures</li>
-          <li>Mentoring students in project development</li>
-          <li>Creating curriculum materials</li>
+      <!-- Contact -->
+      <section class="section contact" aria-label="Contact">
+        <h2>
+          <i class="fa-solid fa-envelope icon" aria-hidden="true"></i> Contact
+        </h2>
+        <ul class="contact-info">
+          <li>
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:abdelrahmanayman0011@gmail.com"
+              >abdelrahmanayman0011@gmail.com</a
+            >
+          </li>
+          <li>
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            <a
+              href="https://www.linkedin.com/in/bedoayman/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              linkedin.com/in/bedoayman
+            </a>
+          </li>
+          <li>
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+            <a
+              href="https://github.com/AbdelrahmanAyman0011"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              github.com/AbdelrahmanAyman0011
+            </a>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone" aria-hidden="true"></i>
+            <a href="tel:+201026550844">+20 1026550844</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+            <a
+              href="resume.pdf"
+              class="resume-button"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Download Resume (PDF)</a
+            >
+          </li>
         </ul>
-      </div>
+      </section>
 
-      <div class="timeline-item">
-        <div class="timeline-header">
-          <h3>Linux Intern - ITI</h3>
-          <span class="timeline-date">Jul 2024 – Aug 2024</span>
-        </div>
-        <ul class="experience-details">
-          <li>Linux administration and Red Hat OS</li>
-          <li>System security implementation</li>
-          <li>Infrastructure management</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Projects Section -->
-    <div class="section">
-      <h2><i class="fas fa-code-branch icon"></i> Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <h3>Car Rental System</h3>
-          <p>Web app for renting cars using PHP and MySQL.</p>
-          <a href="https://github.com/AbdelrahmanAyman0011/Car-Rental-System" target="_blank" class="project-link">
-            <i class="fab fa-github"></i> View on GitHub
-          </a>
-        </div>
-
-        <div class="project-card">
-          <h3>Clothing Store</h3>
+      <!-- Education -->
+      <section class="section education" aria-label="Education">
+        <h2>
+          <i class="fa-solid fa-graduation-cap icon" aria-hidden="true"></i>
+          Education
+        </h2>
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <h3>Alexandria National University</h3>
+            <time class="timeline-date">Expected June 2026</time>
+          </div>
+          <div class="location">Alexandria, Egypt</div>
+          <p>Bachelor of Computer Science</p>
           <p>
-            E-commerce platform with secure payment and inventory management.
+            <strong>Relevant Coursework:</strong> Data Structures and Algorithms
+            (C++), Object Oriented Programming (JAVA)(OOP), Probability &
+            Statistics in CS (Python), Intro to CS II (C++), Linear Algebra,
+            Number theory, AI & ML, Operating Systems, Cryptography, Computer
+            Networks, DBMS
           </p>
-          <a href="https://github.com/AbdelrahmanAyman0011/Clothing_Store" target="_blank" class="project-link">
-            <i class="fab fa-github"></i> View on GitHub
-          </a>
-        </div>
+        </article>
+      </section>
 
-        <div class="project-card">
-          <h3>Network Simulation</h3>
-          <p>LAN topology and subnetting using Cisco Packet Tracer.</p>
-          <a href="https://github.com/AbdelrahmanAyman0011/Network-simulation" target="_blank" class="project-link">
-            <i class="fab fa-github"></i> View on GitHub
-          </a>
-        </div>
+      <!-- Experience -->
+      <section class="section experience" aria-label="Experience">
+        <h2>
+          <i class="fa-solid fa-briefcase icon" aria-hidden="true"></i>
+          Experience
+        </h2>
 
-        <div class="project-card">
-          <h3>8 Puzzle Game</h3>
-          <p>AI-based solver using BFS, DFS, and A* algorithms.</p>
-          <a href="https://github.com/AbdelrahmanAyman0011/8-puzzle-game" target="_blank" class="project-link">
-            <i class="fab fa-github"></i> View on GitHub
-          </a>
-        </div>
-
-        <div class="project-card">
-          <h3>Face Recognition</h3>
-          <p>Image classification using PCA and LDA.</p>
-          <a href="https://github.com/AbdelrahmanAyman0011/Face-Recognition" target="_blank" class="project-link">
-            <i class="fab fa-github"></i> View on GitHub
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Technical Skills Section -->
-    <div class="section">
-      <h2><i class="fas fa-code icon"></i> Technical Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h4>Programming Languages</h4>
-          <ul class="skills">
-            <li>Java</li>
-            <li>C</li>
-            <li>C++</li>
-            <li>Python</li>
-            <li>PHP</li>
-            <li>JavaScript</li>
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <h3>Network Production Engineering Intern - Meta</h3>
+            <time class="timeline-date">June 2025 – Sept 2025</time>
+          </div>
+          <div class="location">Dublin, Ireland</div>
+          <ul class="experience-details">
+            <li>
+              Worked in Meta's network infrastructure team, focusing on
+              maintaining and optimizing global network systems
+            </li>
+            <li>
+              Specialized in routing policy verification and ensured correct
+              routing behavior
+            </li>
+            <li>
+              Developed automation scripts in Python to monitor network
+              operations and predict potential failures
+            </li>
+            <li>
+              Leveraged Linux-based systems to implement mitigation strategies
+              and maintain reliability of large-scale network operations
+            </li>
           </ul>
-        </div>
+        </article>
 
-        <div class="skill-category">
-          <h4>Web Development</h4>
-          <ul class="skills">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>SQL</li>
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <h3>Coding Instructor - iSchool</h3>
+            <time class="timeline-date">June 2024 – September 2024</time>
+          </div>
+          <div class="location">Remote</div>
+          <ul class="experience-details">
+            <li>
+              Teach programming, data structures, algorithms, and coding to
+              students
+            </li>
+            <li>
+              Mentor and guide students in projects to enhance their practical
+              and theoretical knowledge in coding
+            </li>
           </ul>
-        </div>
+        </article>
 
-        <div class="skill-category">
-          <h4>Tools & Concepts</h4>
-          <ul class="skills">
-            <li>Git</li>
-            <li>Linux</li>
-            <li>GUI</li>
-            <li>OOP</li>
+        <article class="timeline-item">
+          <div class="timeline-header">
+            <h3>Linux Intern - Information Technology Institute (ITI)</h3>
+            <time class="timeline-date">July 2024 – August 2024</time>
+          </div>
+          <div class="location">Remote</div>
+          <ul class="experience-details">
+            <li>
+              Focused on Linux administration, Red Hat operating systems,
+              managing infrastructure, and virtualization
+            </li>
+            <li>
+              Gained hands-on experience with Linux/UNIX systems, managing
+              users, monitoring, services, and system security
+            </li>
           </ul>
-        </div>
+        </article>
+      </section>
 
-        <div class="skill-category">
-          <h4>Other Skills</h4>
-          <ul class="skills">
-            <li>Problem Solving</li>
-            <li>Database Management</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+      <!-- Projects -->
+      <section class="section projects" aria-label="Projects">
+        <h2>
+          <i class="fa-solid fa-code-branch icon" aria-hidden="true"></i>
+          Projects
+        </h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <h3>Car Rental System</h3>
+            <p class="project-tech">PHP, MySQL, HTML, CSS, JavaScript</p>
+            <p class="project-date">December 2023 – January 2024</p>
+            <p>
+              Developed a Car Rental System with a user-friendly interface for
+              reserving, returning, and browsing cars, and viewing reservation
+              history; implemented admin pages and backend functionality using
+              PHP and SQL. Designed the responsive UI using HTML, CSS, and
+              JavaScript, and created an ERD for efficient data management and
+              retrieval.
+            </p>
+            <a
+              href="https://github.com/AbdelrahmanAyman0011/Car-Rental-System"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i> View on
+              GitHub
+            </a>
+          </div>
 
+          <div class="project-card">
+            <h3>Clothing Store</h3>
+            <p class="project-tech">PHP, MySQL, HTML, CSS, JavaScript</p>
+            <p class="project-date">March 2024 – May 2024</p>
+            <p>
+              Developed a seamless and secure online clothing platform with
+              features for browsing, purchasing, and categorizing products, user
+              authentication, and secure payment integration. Ensured secure
+              database management, implemented real-time inventory updates, and
+              created a comprehensive shopping cart and checkout system.
+            </p>
+            <a
+              href="https://github.com/AbdelrahmanAyman0011/Clothing_Store"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i> View on
+              GitHub
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>Network Simulation</h3>
+            <p class="project-tech">
+              Cisco Packet Tracer, Networking, Subnetting
+            </p>
+            <p class="project-date">April 2024 – May 2024</p>
+            <p>
+              Implemented LAN topologies using Cisco Packet Tracer for efficient
+              network design and connectivity, configured IP addressing and
+              subnetting schemes, and collaborated on solutions for network
+              segmentation and management. Conducted rigorous testing to
+              validate configurations and ensure seamless connectivity and
+              routing.
+            </p>
+            <a
+              href="https://github.com/AbdelrahmanAyman0011/Network-simulation"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i> View on
+              GitHub
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>Face Recognition</h3>
+            <p class="project-tech">Python, Machine Learning, PCA, LDA</p>
+            <p class="project-date">March 2024 – May 2024</p>
+            <p>
+              Performed face recognition using the ORL dataset, consisting of 10
+              grayscale images of 40 subjects each. Leveraged machine learning
+              techniques like Principal Component Analysis (PCA) and Linear
+              Discriminant Analysis (LDA) to identify the subject of a given
+              image.
+            </p>
+            <a
+              href="https://github.com/AbdelrahmanAyman0011/Face-Recognition"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i> View on
+              GitHub
+            </a>
+          </div>
+
+          <div class="project-card">
+            <h3>8 Puzzle Game</h3>
+            <p>
+              The 8-Puzzle Problem is a classic challenge in artificial
+              intelligence and search algorithms. Its objective is to rearrange
+              a 3x3 grid of numbered tiles from an initial state to a goal state
+              using the fewest moves possible. This report explores the
+              implementation and performance analysis of three search
+              algorithms: Depth-First Search (DFS), Breadth-First Search (BFS),
+              and A*.
+            </p>
+            <a
+              href="https://github.com/AbdelrahmanAyman0011/8-puzzle-game"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link"
+            >
+              <i class="fa-brands fa-github" aria-hidden="true"></i> View on
+              GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Technical Skills -->
+      <section class="section skills" aria-label="Technical Skills">
+        <h2>
+          <i class="fa-solid fa-code icon" aria-hidden="true"></i> Technical
+          Skills
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>Languages</h4>
+            <ul class="skills">
+              <li>C++</li>
+              <li>Java</li>
+              <li>Python</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>C</li>
+              <li>SQL</li>
+              <li>PHP</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h4>Networking & Systems</h4>
+            <ul class="skills">
+              <li>Linux</li>
+              <li>Kernel concepts</li>
+              <li>TCP/IP</li>
+              <li>TCP</li>
+              <li>UDP</li>
+              <li>ICMP</li>
+              <li>DNS</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h4>Tools & Technologies</h4>
+            <ul class="skills">
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Cisco Packet Tracer</li>
+            </ul>
+          </div>
+
+          <div class="skill-category">
+            <h4>Concepts</h4>
+            <ul class="skills">
+              <li>Problem Solving</li>
+              <li>Object-Oriented Programming (OOP)</li>
+              <li>Database Management</li>
+              <li>Networking</li>
+              <li>Troubleshooting</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements -->
+      <section class="section achievements" aria-label="Achievements">
+        <h2>
+          <i class="fa-solid fa-trophy icon" aria-hidden="true"></i>
+          Achievements
+        </h2>
+        <ul class="achievement-list">
+          <li>
+            First place in university's ECPC qualifications and advanced to the
+            ECPC competition for two consecutive years
+          </li>
+          <li>
+            Led problem-solving training sessions, mentoring peers in
+            programming and algorithms
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <p class="footer-note">© <span id="year"></span> Abdelrahman Mohamed</p>
+    </footer>
+
+    <script>
+      // small helper to set the year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
