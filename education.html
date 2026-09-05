@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Education | Abdelrahman Mohamed</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-container">
+      
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="index.html" class="nav-brand">Abdelrahman</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="experience.html">Experience</a>
+          <a href="education.html" class="active">Education</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </nav>
+
+      <header class="page-header">
+        <h1>Education</h1>
+        <p>My academic background and relevant coursework.</p>
+      </header>
+
+      <section>
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Alexandria National University</h2>
+            <span class="card-date">Graduated June 2026</span>
+          </div>
+          <p class="card-subtitle">Alexandria, Egypt</p>
+          <div class="card-content">
+            <p><strong>Degree:</strong> Bachelor of Computer Science - Cybersecurity Department</p>
+            <p><strong>Relevant Coursework:</strong></p>
+            <ul>
+              <li>Data Structures & Algorithms</li>
+              <li>Object-Oriented Programming</li>
+              <li>Operating Systems</li>
+              <li>Computer Networks & Network Security</li>
+              <li>Data Science & Machine Learning</li>
+              <li>Cryptography</li>
+              <li>Distributed Systems</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        © <span id="year"></span> Abdelrahman Mohamed
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

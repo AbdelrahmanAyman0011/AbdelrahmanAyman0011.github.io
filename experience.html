@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experience | Abdelrahman Mohamed</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-container">
+      
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="index.html" class="nav-brand">Abdelrahman</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="experience.html" class="active">Experience</a>
+          <a href="education.html">Education</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="blog.html">Blog</a>
+        </div>
+      </nav>
+
+      <header class="page-header">
+        <h1>Experience</h1>
+        <p>My professional background in engineering and cloud infrastructure.</p>
+      </header>
+
+      <section>
+        
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">System Developer - Stealth Startup</h2>
+            <span class="card-date">Oct 2025 – Present</span>
+          </div>
+          <p class="card-subtitle">Remote - USA</p>
+          <div class="card-content">
+            <ul>
+              <li>Architected end-to-end AWS cloud infrastructure for high availability and reliability, prioritizing resilient system design and low operational costs; automated resource provisioning across services using Terraform (IaC).</li>
+              <li>Engineered a high-throughput, scalable parallel data pipeline using PostgreSQL as an event producer, designing custom UDF-based batching mechanisms to dispatch streaming records across concurrent background workers.</li>
+              <li>Refactored legacy User-Defined Functions (UDFs) into polyglot, event-driven serverless services across Rust, Python, and Java running on AWS Lambda.</li>
+              <li>Built isolated local cloud emulation suites with LocalStack and Floci, accelerating team feedback loops, offline debugging, and comprehensive Lambda regression testing.</li>
+              <li>Improved performance and analytics turnaround across massive datasets by optimizing queries and partitioned storage using Amazon Athena and advanced SQL.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Devops Intern - Pixelogic Media</h2>
+            <span class="card-date">Jul 2026 – Sept 2026</span>
+          </div>
+          <p class="card-subtitle">Cairo, Egypt</p>
+          <div class="card-content">
+            <ul>
+              <li>Transitioned cloud infrastructure management to Infrastructure as Code (IaC) using Terraform and Terragrunt, architecting and provisioning the entire AWS IAM service layer.</li>
+              <li>Engineered automated refactoring and validation scripts to overhaul the entire company's tagging architecture, enabling granular cost analysis and accurate budget management across all individual teams and projects.</li>
+              <li>Monitored production infrastructure health, troubleshot operational issues, and shadowed senior engineers to streamline cloud operations, system reliability, and deployment workflows.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Network Production Engineering Intern - Meta</h2>
+            <span class="card-date">June 2025 – Sept 2025</span>
+          </div>
+          <p class="card-subtitle">Dublin, Ireland</p>
+          <div class="card-content">
+            <ul>
+              <li>Contributed to Meta's network infrastructure team, supporting large-scale production network reliability.</li>
+              <li>Worked on network policy verification to validate infrastructure-wide configuration changes against established routing policies, ensuring changes across production systems did not violate network constraints.</li>
+              <li>Developed Python automation tools to monitor network operations, troubleshoot issues, and detect potential failures.</li>
+              <li>Used Linux-based systems to implement mitigation strategies and maintain network stability at scale.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h2 class="card-title">Linux Intern - Information Technology Institute (ITI)</h2>
+            <span class="card-date">July 2024 – August 2024</span>
+          </div>
+          <p class="card-subtitle">Remote</p>
+          <div class="card-content">
+            <ul>
+              <li>Focused on Linux administration, Red Hat operating systems, managing infrastructure, and virtualization.</li>
+              <li>Gained hands-on experience with Linux/UNIX systems, managing users, monitoring, services, and system security.</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+      <footer class="footer">
+        © <span id="year"></span> Abdelrahman Mohamed
+      </footer>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

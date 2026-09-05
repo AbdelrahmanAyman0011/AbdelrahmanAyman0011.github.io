@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog | Abdelrahman Mohamed</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-container">
+      
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="index.html" class="nav-brand">Abdelrahman</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="experience.html">Experience</a>
+          <a href="education.html">Education</a>
+          <a href="achievements.html">Achievements</a>
+          <a href="blog.html" class="active">Blog</a>
+        </div>
+      </nav>
+
+      <header class="page-header">
+        <h1>Blog</h1>
+        <p>Writing about cybersecurity, systems engineering, and technology.</p>
+      </header>
+
+      <section>
+        
+        <!-- Example Blog Post 1 -->
+        <article class="blog-post">
+          <span class="blog-date">September 5, 2026</span>
+          <h2><a href="#" onclick="openModal(event, 'post1')">Building Scalable Data Pipelines with PostgreSQL</a></h2>
+          <p class="blog-excerpt">
+            An in-depth look at how we used PostgreSQL as an event producer and designed custom UDF-based batching mechanisms for concurrent workers.
+          </p>
+        </article>
+
+        <!-- Example Blog Post 2 -->
+        <article class="blog-post">
+          <span class="blog-date">August 20, 2026</span>
+          <h2><a href="#" onclick="openModal(event, 'post2')">Transitioning to Infrastructure as Code with Terraform</a></h2>
+          <p class="blog-excerpt">
+            My experience refactoring legacy cloud infrastructure and provisioning the entire AWS IAM service layer using Terraform and Terragrunt.
+          </p>
+        </article>
+
+        <!-- Example Blog Post 3 -->
+        <article class="blog-post">
+          <span class="blog-date">July 10, 2026</span>
+          <h2><a href="#" onclick="openModal(event, 'post3')">The Importance of Network Policy Verification</a></h2>
+          <p class="blog-excerpt">
+            How we validate infrastructure-wide configuration changes against established routing policies to maintain production reliability.
+          </p>
+        </article>
+
+      </section>
+
+      <footer class="footer">
+        © <span id="year"></span> Abdelrahman Mohamed
+      </footer>
+    </main>
+
+    <!-- Modal Overlay -->
+    <div id="blog-modal" class="modal-overlay" onclick="closeModal(event)">
+      <div class="modal-content" onclick="event.stopPropagation()">
+        <button class="modal-close" onclick="closeModal(event)">&times;</button>
+        <h2 id="modal-title" class="modal-title"></h2>
+        <span id="modal-date" class="modal-date"></span>
+        <div id="modal-body" class="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Hidden Blog Content -->
+    <div id="post1" style="display: none;">
+      <p>In this post, we discuss how a high-throughput, scalable parallel data pipeline can be built by using PostgreSQL as an event producer.</p>
+      <p>By designing custom User-Defined Function (UDF) based batching mechanisms, we were able to efficiently dispatch streaming records across concurrent background workers.</p>
+      <p>This significantly improved performance and analytical turnaround time across massive datasets.</p>
+    </div>
+
+    <div id="post2" style="display: none;">
+      <p>Transitioning cloud infrastructure management to Infrastructure as Code (IaC) is critical for modern operations.</p>
+      <p>Using Terraform and Terragrunt, we architected and provisioned an entire AWS IAM service layer.</p>
+      <p>We also engineered automated refactoring and validation scripts to overhaul tagging architecture, enabling granular cost analysis and accurate budget management.</p>
+    </div>
+
+    <div id="post3" style="display: none;">
+      <p>Network policy verification is an essential part of large-scale production network reliability.</p>
+      <p>It allows us to validate infrastructure-wide configuration changes against established routing policies.</p>
+      <p>By ensuring changes do not violate network constraints, we significantly reduce the risk of outages and maintain network stability at scale.</p>
+    </div>
+
+    <script>
+      // Year in Footer
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Modal Logic
+      function openModal(event, postId) {
+        event.preventDefault(); // prevent jumping to top of page
+        
+        // Get the post info from the clicked article
+        const article = event.target.closest('.blog-post');
+        const title = article.querySelector('h2').textContent;
+        const date = article.querySelector('.blog-date').textContent;
+        const contentHtml = document.getElementById(postId).innerHTML;
+
+        // Set the modal content
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-date').textContent = date;
+        document.getElementById('modal-body').innerHTML = contentHtml;
+
+        // Show the modal
+        document.getElementById('blog-modal').classList.add('active');
+        document.body.style.overflow = 'hidden'; // prevent scrolling background
+      }
+
+      function closeModal(event) {
+        if (event) {
+          event.preventDefault();
+        }
+        document.getElementById('blog-modal').classList.remove('active');
+        document.body.style.overflow = ''; // restore scrolling
+      }
+    </script>
+  </body>
+</html>
