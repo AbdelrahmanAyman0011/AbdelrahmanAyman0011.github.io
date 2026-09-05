@@ -294,6 +294,7 @@ body {
   .nav-links a {
     white-space: nowrap;
     position: relative;
+    flex-shrink: 0;
   }
   .nav-links a::after {
     content: '';
