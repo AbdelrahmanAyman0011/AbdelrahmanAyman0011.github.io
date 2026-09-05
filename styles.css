@@ -46,6 +46,8 @@ body {
 .nav-links {
   display: flex;
   gap: 24px;
+  cursor: grab;
+  scroll-behavior: smooth;
 }
 
 .nav-links a {
