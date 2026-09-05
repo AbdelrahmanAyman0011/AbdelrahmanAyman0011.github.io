@@ -54,10 +54,26 @@ body {
   font-size: 0.95rem;
   font-weight: 500;
   transition: color 0.2s ease;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--accent);
+  transition: width 0.3s ease;
 }
 
 .nav-links a:hover, .nav-links a.active {
   color: var(--accent);
+}
+
+.nav-links a.active::after, .nav-links a:hover::after {
+  width: 100%;
 }
 
 /* Hero Section (Home) */
@@ -263,9 +279,34 @@ body {
     gap: 16px;
   }
   .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    gap: 20px;
+    padding-bottom: 5px;
+    scrollbar-width: none; /* Firefox */
+  }
+  .nav-links::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+  }
+  .nav-links a {
+    white-space: nowrap;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--accent);
+    transition: width 0.3s ease;
+  }
+  .nav-links a.active::after, .nav-links a:hover::after {
+    width: 100%;
   }
   .social-links {
     justify-content: center;
