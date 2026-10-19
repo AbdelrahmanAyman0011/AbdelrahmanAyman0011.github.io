@@ -456,3 +456,7 @@ body::before {
 .book-main p { color: var(--muted); margin: 0 auto 20px; max-width: 44ch; }
 .book-alt summary { cursor: pointer; color: var(--muted); font-size: .9rem; padding: 8px 0 16px; text-align: center; }
 .book-alt summary:hover { color: var(--accent); }
+.topics { list-style: none; padding: 0; margin: 0 auto 18px; max-width: 46ch; text-align: left; color: var(--text); font-size: .95rem; }
+.topics li { position: relative; padding-left: 22px; margin-bottom: 8px; }
+.topics li::before { content: '\2713'; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+.intro a { color: var(--accent); text-underline-offset: 3px; }

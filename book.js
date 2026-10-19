@@ -75,7 +75,7 @@
     var d = details();
     if (!d.name || !/^\S+@\S+\.\S+$/.test(d.email)) { summary.textContent = 'Please enter your name and a valid email.'; summary.className = 'summary show'; return; }
     if (!selected) { summary.textContent = 'Please pick a date and time.'; summary.className = 'summary show'; return; }
-    var body = 'Hi Abdelrahman,\n\nI would like to book a 30-minute call.\n\n' +
+    var body = 'Hi Abdelrahman,\n\nI would like to book my free first consulting session (30 minutes).\n\n' +
       'When: ' + fmtLocal(selected) + ' (' + tz + ')\n' +
       'UTC: ' + selected.toISOString() + '\n' +
       'Name: ' + d.name + '\nEmail: ' + d.email + '\n' +
