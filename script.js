@@ -1,37 +1,40 @@
-// script.js
-document.addEventListener('DOMContentLoaded', () => {
-  const slider = document.querySelector('.nav-links');
-  
-  if (!slider) return;
+(function () {
+  var root = document.documentElement;
+  var btn = document.querySelector('.theme-toggle');
 
-  let isDown = false;
-  let startX;
-  let scrollLeft;
+  function apply(theme) {
+    root.setAttribute('data-theme', theme);
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = theme === 'dark' ? '#0c0c0f' : '#fafaf9';
+    if (btn) btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
 
-  slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.style.cursor = 'grabbing';
-    // Prevent default to avoid highlighting text while dragging
-    e.preventDefault();
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
+  apply(root.getAttribute('data-theme') || 'light');
+
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      apply(next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  }
+
+  // Follow system changes unless the user picked a theme explicitly
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  mq.addEventListener && mq.addEventListener('change', function (e) {
+    var saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (err) {}
+    if (!saved) apply(e.matches ? 'dark' : 'light');
   });
 
-  slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.style.cursor = 'grab';
-  });
+  // Keep the active nav tab visible on narrow screens
+  var active = document.querySelector('.nav-links a.active');
+  if (active && active.scrollIntoView) active.scrollIntoView({ inline: 'center', block: 'nearest' });
 
-  slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.style.cursor = 'grab';
-  });
+  var year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
 
-  slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; // multiplier for drag speed
-    slider.scrollLeft = scrollLeft - walk;
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && typeof closeModal === 'function') closeModal();
   });
-});
+})();
