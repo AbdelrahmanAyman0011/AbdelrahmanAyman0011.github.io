@@ -450,3 +450,9 @@ body::before {
   .field-row { grid-template-columns: 1fr; gap: 0; }
   .book-card { padding: 18px; }
 }
+
+.book-main { text-align: center; padding: 32px 24px; margin-bottom: 20px; }
+.book-main h2 { margin: 0 0 8px; font-size: 1.25rem; letter-spacing: -.02em; }
+.book-main p { color: var(--muted); margin: 0 auto 20px; max-width: 44ch; }
+.book-alt summary { cursor: pointer; color: var(--muted); font-size: .9rem; padding: 8px 0 16px; text-align: center; }
+.book-alt summary:hover { color: var(--accent); }
