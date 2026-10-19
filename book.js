@@ -66,7 +66,6 @@
     return {
       name: document.getElementById('name').value.trim(),
       email: document.getElementById('email').value.trim(),
-      topic: document.getElementById('topic').value,
       msg: document.getElementById('msg').value.trim()
     };
   }
@@ -79,10 +78,9 @@
     var body = 'Hi Abdelrahman,\n\nI would like to book a 30-minute call.\n\n' +
       'When: ' + fmtLocal(selected) + ' (' + tz + ')\n' +
       'UTC: ' + selected.toISOString() + '\n' +
-      'Topic: ' + d.topic + '\n' +
       'Name: ' + d.name + '\nEmail: ' + d.email + '\n' +
       (d.msg ? '\nMessage:\n' + d.msg + '\n' : '');
-    location.href = 'mailto:' + HOST_EMAIL + '?subject=' + encodeURIComponent('Call request: ' + d.topic + ' (' + d.name + ')') + '&body=' + encodeURIComponent(body);
+    location.href = 'mailto:' + HOST_EMAIL + '?subject=' + encodeURIComponent('Call request from ' + d.name) + '&body=' + encodeURIComponent(body);
   });
 
   icsBtn.addEventListener('click', function () {
@@ -91,7 +89,7 @@
     var ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//Abdelrahman Mohamed//Booking//EN', 'BEGIN:VEVENT',
       'UID:' + selected.getTime() + '@abdelrahmanayman0011.github.io',
       'DTSTAMP:' + icsDate(new Date()), 'DTSTART:' + icsDate(selected), 'DTEND:' + icsDate(end),
-      'SUMMARY:Call with Abdelrahman Mohamed' + (d.topic ? ' - ' + d.topic : ''),
+      'SUMMARY:Call with Abdelrahman Mohamed',
       'DESCRIPTION:Requested via abdelrahmanayman0011.github.io (pending confirmation by email).',
       'END:VEVENT', 'END:VCALENDAR'].join('\r\n');
     var a = document.createElement('a');
