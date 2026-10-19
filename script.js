@@ -9,7 +9,7 @@
     if (btn) btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
   }
 
-  apply(root.getAttribute('data-theme') || 'light');
+  apply(root.getAttribute('data-theme') || 'dark');
 
   if (btn) {
     btn.addEventListener('click', function () {
@@ -18,14 +18,6 @@
       try { localStorage.setItem('theme', next); } catch (e) {}
     });
   }
-
-  // Follow system changes unless the user picked a theme explicitly
-  var mq = window.matchMedia('(prefers-color-scheme: dark)');
-  mq.addEventListener && mq.addEventListener('change', function (e) {
-    var saved = null;
-    try { saved = localStorage.getItem('theme'); } catch (err) {}
-    if (!saved) apply(e.matches ? 'dark' : 'light');
-  });
 
   // Keep the active nav tab visible on narrow screens
   var active = document.querySelector('.nav-links a.active');

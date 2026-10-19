@@ -10,12 +10,12 @@
     <meta property="og:image" content="profile.jpg" />
     <meta property="og:type" content="website" />
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%234f46e5'/%3E%3Ctext x='32' y='44' font-size='34' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EA%3C/text%3E%3C/svg%3E" />
-        <meta name="theme-color" content="#fafaf9" />
+        <meta name="theme-color" content="#0c0c0f" />
     <script>
       (function () {
         var t = null;
         try { t = localStorage.getItem('theme'); } catch (e) {}
-        if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        if (!t) t = 'dark';
         document.documentElement.setAttribute('data-theme', t);
       })();
     </script>
@@ -33,6 +33,7 @@
           <a href="education.html">Education</a>
           <a href="achievements.html">Achievements</a>
           <a href="blog.html">Blog</a>
+          <a href="book.html" class="nav-cta">Book a call</a>
         </div>
         <button class="theme-toggle" type="button" aria-label="Toggle dark mode">
           <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
@@ -62,10 +63,10 @@
       </section>
 
       <section class="stats reveal" aria-label="Highlights">
-        <div class="stat"><b>4</b><span>Engineering roles</span></div>
-        <div class="stat"><b>Meta</b><span>Network Production intern</span></div>
+        <div class="stat"><b>4</b><span>Roles</span></div>
+        <div class="stat"><b>Meta</b><span>Intern</span></div>
         <div class="stat"><b>2&times;</b><span>ECPC finalist</span></div>
-        <div class="stat"><b>2</b><span>AWS Academy certs</span></div>
+        <div class="stat"><b>2</b><span>AWS certs</span></div>
       </section>
 
       <section class="reveal">
