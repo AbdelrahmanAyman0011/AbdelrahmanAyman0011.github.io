@@ -38,3 +38,15 @@
     if (e.key === 'Escape' && typeof closeModal === 'function') closeModal();
   });
 })();
+
+// Scroll reveal
+(function () {
+  var els = document.querySelectorAll('.reveal, .timeline .card, .blog-post');
+  if (!('IntersectionObserver' in window)) return;
+  document.documentElement.classList.add('js');
+  els.forEach(function (el) { el.classList.add('reveal'); });
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  els.forEach(function (el) { io.observe(el); });
+})();
